@@ -16,6 +16,7 @@ on:
 jobs:
 
   build_packages:
+    if: always()
     name: Build ${{ github.event.client_payload.device || github.event.inputs.device }} packages
     runs-on: ubuntu-20.04
     env:
