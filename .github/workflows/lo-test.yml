@@ -22,7 +22,7 @@ jobs:
       DEVICE: ${{ github.event.client_payload.device || github.event.inputs.device }}
       BRANCH: ${{ github.event.client_payload.branch || github.event.inputs.branch }}
       TG: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-    if: github.repository_owner=='Plutoxxx'
+#     if: github.repository_owner=='Plutoxxx'
 
     steps:
 
@@ -212,7 +212,7 @@ jobs:
 
   generate_slim_firmware:
     needs: build_packages
-    if: always()
+#     if: always()
     name: Generate ${{ github.event.client_payload.device || github.event.inputs.device }} slim firmware
     runs-on: ubuntu-18.04
     env:
